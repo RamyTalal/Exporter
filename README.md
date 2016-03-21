@@ -7,7 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Export the Laravel environment file to a capable server format.
+Export the Laravel environment file to a capable web server format.
 
 ## Install
 

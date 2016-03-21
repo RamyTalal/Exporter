@@ -20,7 +20,7 @@ class Export extends Command
      *
      * @var string
      */
-    protected $description = 'Export the environment file to a web server capable format.';
+    protected $description = 'Export the environment file to a capable web server format.';
 
     /**
      * @var \Illuminate\Filesystem\Filesystem
@@ -55,7 +55,7 @@ class Export extends Command
 
     /**
      * Export the environment file.
-     *
+     * 
      * @param $fileContents
      */
     protected function export($fileContents)

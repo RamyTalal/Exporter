@@ -1,6 +1,6 @@
 {
     "name": "ramytalal/exporter",
-    "description": "Export the Laravel environment file to a capable server format.",
+    "description": "Export the Laravel environment file to a capable web server format.",
     "keywords": ["env", "environment", "export", "laravel"],
     "license": "MIT",
     "homepage": "https://github.com/RamyTalal/Exporter",
@@ -18,7 +18,6 @@
         "phpunit/phpunit": "~4.0",
         "illuminate/console": "~5.1",
         "illuminate/filesystem": "~5.1",
-        "scrutinizer/ocular": "~1.1",
         "squizlabs/php_codesniffer": "~2.3"
     },
     "autoload": {
