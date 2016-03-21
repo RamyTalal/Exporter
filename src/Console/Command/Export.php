@@ -57,6 +57,7 @@ class Export extends Command
      * Export the environment file.
      *
      * @param $fileContents
+     * @return int
      */
     protected function export($fileContents)
     {
@@ -65,7 +66,7 @@ class Export extends Command
 
         if (! class_exists($server)) {
             $this->error('The provided server is not exportable.');
-            exit();
+            return 0;
         }
 
         preg_match_all('/([a-zA-z0-9]+)="(.+)"/', $fileContents, $matches);
