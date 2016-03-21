@@ -9,7 +9,7 @@ interface Output
      *
      * @param $keys
      * @param $values
-     * 
+     *
      * @return string
      */
     public function generate($keys, $values);

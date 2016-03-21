@@ -55,7 +55,7 @@ class Export extends Command
 
     /**
      * Export the environment file.
-     * 
+     *
      * @param $fileContents
      */
     protected function export($fileContents)
