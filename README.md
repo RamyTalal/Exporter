@@ -23,7 +23,7 @@ Open `config/app.php` and register the required service provider.
 
 ``` php
 'providers' => [
-    Talal\Exporter\Provider\ServiceProvider::class
+    Talal\Exporter\Provider\ExporterServiceProvider::class
 ]
 ```
 
