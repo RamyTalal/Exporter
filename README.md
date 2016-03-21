@@ -17,9 +17,9 @@ Export the Laravel environment file to a capable web server format.
 $ composer require RamyTalal/Exporter
 ```
 
-### ServiceProvider
+### Service Provider
 
-Open config/app.php and register the required service provider.
+Open `config/app.php` and register the required service provider.
 
 ``` php
 'providers' => [
