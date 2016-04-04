@@ -69,7 +69,7 @@ class Export extends Command
             return 0;
         }
 
-        preg_match_all('/([a-zA-z0-9]+)="(.+)"/', $fileContents, $matches);
+        preg_match_all('/(\w+)="?(.*)(?<!")/', $fileContents, $matches);
 
         $exporter = new $server();
         $this->line($exporter->generate($matches[1], $matches[2]));

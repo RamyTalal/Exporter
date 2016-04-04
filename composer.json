@@ -1,7 +1,7 @@
 {
     "name": "ramytalal/exporter",
     "description": "Export the Laravel environment file to a capable web server format.",
-    "keywords": ["env", "environment", "export", "laravel"],
+    "keywords": ["env", "environment", "export", "laravel", "env export", "environment export"],
     "license": "MIT",
     "homepage": "https://github.com/RamyTalal/Exporter",
     "authors": [
