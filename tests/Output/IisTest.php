@@ -1,6 +1,6 @@
 <?php
 
-namespace Talal\Exporter\Tests;
+namespace Talal\Exporter\Tests\Output;
 
 use Talal\Exporter\Output\Iis;
 
@@ -13,13 +13,13 @@ class IisTest extends \PHPUnit_Framework_TestCase
             ['value1', 'value2']
         ];
 
-        $server = new Iis;
-        $output = $server->generate($data[0], $data[1]);
+        $server = new Iis($data[0], $data[1]);
+        $output = $server->generate();
 
         $expected = <<<EOF
 <environmentVariables>
-  <environmentVariable name="key1" value="value1"/>
-  <environmentVariable name="key2" value="value2"/>
+	<environmentVariable name="key1" value="value1"/>
+	<environmentVariable name="key2" value="value2"/>
 </environmentVariables>
 EOF;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Talal\Exporter\Tests;
+namespace Talal\Exporter\Tests\Output;
 
 use Talal\Exporter\Output\Apache;
 
@@ -13,8 +13,8 @@ class ApacheTest extends \PHPUnit_Framework_TestCase
             ['value1', 'value2']
         ];
 
-        $server = new Apache;
-        $output = $server->generate($data[0], $data[1]);
+        $server = new Apache($data[0], $data[1]);
+        $output = $server->generate();
 
         $expected = <<<EOF
 SetEnv key1 "value1"

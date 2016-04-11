@@ -2,17 +2,17 @@
 
 namespace Talal\Exporter\Output;
 
-class Lighttpd implements Output
+class Lighttpd extends Output
 {
     /**
      * @inheritdoc
      */
-    public function generate($keys, $values)
+    public function generate()
     {
         $lines = [];
 
-        foreach ($keys as $key => $match) {
-            $lines[] = sprintf('  "%s" => "%s"', $match, $values[$key]);
+        foreach ($this->keys as $key => $match) {
+            $lines[] = sprintf("\t\"%s\" => \"%s\"", $match, $this->values[$key]);
         }
 
         $output = 'setenv.add-environment = (' . PHP_EOL;

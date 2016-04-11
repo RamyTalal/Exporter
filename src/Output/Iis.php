@@ -2,24 +2,24 @@
 
 namespace Talal\Exporter\Output;
 
-class Iis implements Output
+class Iis extends Output
 {
     /**
      * @inheritdoc
      */
-    public function generate($keys, $values)
+    public function generate()
     {
         $xml = new \XMLWriter;
         $xml->openMemory();
         $xml->setIndent(true);
-        $xml->setIndentString('  ');
+        $xml->setIndentString(sprintf("\t"));
 
         $xml->startElement('environmentVariables');
 
-        foreach ($keys as $key => $match) {
+        foreach ($this->keys as $key => $match) {
             $xml->startElement('environmentVariable');
             $xml->writeAttribute('name', $match);
-            $xml->writeAttribute('value', $values[$key]);
+            $xml->writeAttribute('value', $this->values[$key]);
             $xml->endElement();
         }
 

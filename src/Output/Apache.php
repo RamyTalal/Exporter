@@ -2,17 +2,17 @@
 
 namespace Talal\Exporter\Output;
 
-class Apache implements Output
+class Apache extends Output
 {
     /**
      * @inheritdoc
      */
-    public function generate($keys, $values)
+    public function generate()
     {
         $output = '';
 
-        foreach ($keys as $key => $match) {
-            $output .= sprintf('SetEnv %s "%s"', $match, $values[$key]) . PHP_EOL;
+        foreach ($this->keys as $key => $match) {
+            $output .= sprintf('SetEnv %s "%s"', $match, $this->values[$key]) . PHP_EOL;
         }
 
         return rtrim($output, PHP_EOL);

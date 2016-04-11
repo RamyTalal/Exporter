@@ -4,6 +4,7 @@ namespace Talal\Exporter\Console\Command;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use Talal\Exporter\Exporter;
 
 class Export extends Command
 {
@@ -41,8 +42,6 @@ class Export extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return mixed
      */
     public function handle()
     {
@@ -62,7 +61,7 @@ class Export extends Command
     protected function export($fileContents)
     {
         $server = strtolower($this->argument('server'));
-        $server = 'Talal\\Exporter\\Output\\' . ucfirst($server);
+        $server = sprintf('Talal\Exporter\Output\%s', ucfirst($server));
 
         if (! class_exists($server)) {
             $this->error('The provided server is not exportable.');
@@ -71,7 +70,7 @@ class Export extends Command
 
         preg_match_all('/(\w+)="?(.*)(?<!")/', $fileContents, $matches);
 
-        $exporter = new $server();
-        $this->line($exporter->generate($matches[1], $matches[2]));
+        $exporter = new Exporter(new $server($matches[1], $matches[2]));
+        $this->line($exporter->output());
     }
 }

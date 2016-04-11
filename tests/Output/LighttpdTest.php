@@ -1,6 +1,6 @@
 <?php
 
-namespace Talal\Exporter\Tests;
+namespace Talal\Exporter\Tests\Output;
 
 use Talal\Exporter\Output\Lighttpd;
 
@@ -13,13 +13,13 @@ class LighttpdTest extends \PHPUnit_Framework_TestCase
             ['value1', 'value2']
         ];
 
-        $server = new Lighttpd;
-        $output = $server->generate($data[0], $data[1]);
+        $server = new Lighttpd($data[0], $data[1]);
+        $output = $server->generate();
 
         $expected = <<<EOF
 setenv.add-environment = (
-  "key1" => "value1",
-  "key2" => "value2"
+	"key1" => "value1",
+	"key2" => "value2"
 )
 EOF;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Talal\Exporter\Tests;
+namespace Talal\Exporter\Tests\Output;
 
 use Talal\Exporter\Output\Nginx;
 
@@ -13,8 +13,8 @@ class NginxTest extends \PHPUnit_Framework_TestCase
             ['value1', 'value2']
         ];
 
-        $server = new Nginx;
-        $output = $server->generate($data[0], $data[1]);
+        $server = new Nginx($data[0], $data[1]);
+        $output = $server->generate();
 
         $expected = <<<EOF
 fastcgi_param key1 "value1";
