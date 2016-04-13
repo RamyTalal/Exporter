@@ -15,13 +15,19 @@ abstract class Output
     protected $values = [];
 
     /**
-     * @param array $keys
-     * @param array $values
+     * @param string $fileContents
      */
-    public function __construct(array $keys, array $values)
+    public function __construct($fileContents)
     {
-        $this->keys = $keys;
-        $this->values = $values;
+        $this->parse($fileContents);
+    }
+
+    public function parse($fileContents)
+    {
+        preg_match_all('/(\w+)="?(.*)(?<!")/', $fileContents, $matches);
+
+        $this->keys = $matches[1];
+        $this->values = $matches[2];
     }
 
     /**

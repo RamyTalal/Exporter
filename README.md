@@ -17,7 +17,9 @@ Export the Laravel environment file to a capable web server format.
 $ composer require RamyTalal/Exporter
 ```
 
-### Service Provider
+### Laravel
+
+#### Service Provider
 
 Open `config/app.php` and register the required service provider.
 
@@ -29,8 +31,22 @@ Open `config/app.php` and register the required service provider.
 
 ## Usage
 
+### Laravel
+
 ``` bash
 $ php artisan env:export nginx --file=.env
+```
+
+### Standalone
+
+``` php
+use Talal\Exporter\Exporter;
+use Talal\Exporter\Output\Nginx;
+
+$file = file_get_contents('.env');
+$exporter = new Exporter(new Nginx($file));
+
+echo $exporter->output();
 ```
 
 Nginx, Apache, IIS, and lighttpd are supported.

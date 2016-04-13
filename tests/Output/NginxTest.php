@@ -8,12 +8,12 @@ class NginxTest extends \PHPUnit_Framework_TestCase
 {
     public function testGeneratedOutput()
     {
-        $data = [
-            ['key1', 'key2'],
-            ['value1', 'value2']
-        ];
+        $fileContents = <<<EOF
+key1=value1
+key2="value2"
+EOF;
 
-        $server = new Nginx($data[0], $data[1]);
+        $server = new Nginx($fileContents);
         $output = $server->generate();
 
         $expected = <<<EOF

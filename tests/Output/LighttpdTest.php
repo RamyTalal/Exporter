@@ -8,12 +8,12 @@ class LighttpdTest extends \PHPUnit_Framework_TestCase
 {
     public function testGeneratedOutput()
     {
-        $data = [
-            ['key1', 'key2'],
-            ['value1', 'value2']
-        ];
+        $fileContents = <<<EOF
+key1=value1
+key2="value2"
+EOF;
 
-        $server = new Lighttpd($data[0], $data[1]);
+        $server = new Lighttpd($fileContents);
         $output = $server->generate();
 
         $expected = <<<EOF
