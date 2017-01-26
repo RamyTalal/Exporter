@@ -7,7 +7,7 @@ class Apache extends Output
     /**
      * @inheritdoc
      */
-    public function generate()
+    public function generate() : string
     {
         $output = '';
 

@@ -7,7 +7,7 @@ class Lighttpd extends Output
     /**
      * @inheritdoc
      */
-    public function generate()
+    public function generate() : string
     {
         $lines = [];
 

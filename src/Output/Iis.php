@@ -7,7 +7,7 @@ class Iis extends Output
     /**
      * @inheritdoc
      */
-    public function generate()
+    public function generate() : string
     {
         $xml = new \XMLWriter;
         $xml->openMemory();

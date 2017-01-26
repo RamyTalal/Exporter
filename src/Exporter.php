@@ -21,12 +21,22 @@ class Exporter
         $this->setOutput($output);
     }
 
-    public function setOutput(Output $output)
+	/**
+	 * Set the output converter
+	 *
+	 * @param Output $output
+	 */
+	public function setOutput(Output $output)
     {
         $this->output = $output;
     }
 
-    public function output()
+	/**
+	 * Return the converted environment variables
+	 *
+	 * @return string
+	 */
+	public function output() : string
     {
         return $this->output->generate();
     }
