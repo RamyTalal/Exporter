@@ -2,21 +2,21 @@
 
 namespace Talal\Exporter\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Exporter;
+use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Output\Nginx;
 
 class ExporterTest extends TestCase
 {
     public function testHasValidEnvironment()
     {
-        $fileContents = <<<EOF
+        $fileContents = <<<'EOF'
 key1=value1
 key2="value2"
 EOF;
 
         $exporter = new Exporter(new Nginx($fileContents));
-        $expected = <<<EOF
+        $expected = <<<'EOF'
 fastcgi_param key1 "value1";
 fastcgi_param key2 "value2";
 EOF;
