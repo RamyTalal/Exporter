@@ -2,9 +2,10 @@
 
 namespace Talal\Exporter\Tests\Output;
 
+use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Output\Nginx;
 
-class NginxTest extends \PHPUnit_Framework_TestCase
+class NginxTest extends TestCase
 {
     public function testGeneratedOutput()
     {

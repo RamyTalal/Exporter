@@ -2,9 +2,10 @@
 
 namespace Talal\Exporter\Tests\Output;
 
+use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Output\Bash;
 
-class BashTest extends \PHPUnit_Framework_TestCase
+class BashTest extends TestCase
 {
     public function testGeneratedOutput()
     {

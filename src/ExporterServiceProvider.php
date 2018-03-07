@@ -1,6 +1,6 @@
 <?php
 
-namespace Talal\Exporter\Provider;
+namespace Talal\Exporter;
 
 use Illuminate\Support\ServiceProvider;
 use Talal\Exporter\Console\Command\Export;
@@ -14,9 +14,7 @@ class ExporterServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('command.talal.export.env', function ($app) {
-            return $app[Export::class];
-        });
+        $this->app->bind('command.talal.export.env', Export::class);
         $this->commands('command.talal.export.env');
     }
 }

@@ -2,9 +2,10 @@
 
 namespace Talal\Exporter\Tests\Output;
 
+use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Output\Iis;
 
-class IisTest extends \PHPUnit_Framework_TestCase
+class IisTest extends TestCase
 {
     public function testGeneratedOutput()
     {

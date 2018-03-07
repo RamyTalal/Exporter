@@ -2,9 +2,10 @@
 
 namespace Talal\Exporter\Tests\Output;
 
+use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Output\Apache;
 
-class ApacheTest extends \PHPUnit_Framework_TestCase
+class ApacheTest extends TestCase
 {
     public function testGeneratedOutput()
     {

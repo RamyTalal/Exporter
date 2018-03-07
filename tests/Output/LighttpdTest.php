@@ -2,9 +2,10 @@
 
 namespace Talal\Exporter\Tests\Output;
 
+use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Output\Lighttpd;
 
-class LighttpdTest extends \PHPUnit_Framework_TestCase
+class LighttpdTest extends TestCase
 {
     public function testGeneratedOutput()
     {

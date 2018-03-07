@@ -2,10 +2,11 @@
 
 namespace Talal\Exporter\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Talal\Exporter\Exporter;
 use Talal\Exporter\Output\Nginx;
 
-class ExporterTest extends \PHPUnit_Framework_TestCase
+class ExporterTest extends TestCase
 {
     public function testHasValidEnvironment()
     {
