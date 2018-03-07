@@ -4,7 +4,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/RamyTalal/Exporter/master.svg?style=flat-square)](https://travis-ci.org/RamyTalal/Exporter)
 [![Quality Score](https://img.shields.io/scrutinizer/g/RamyTalal/Exporter.svg?style=flat-square)](https://scrutinizer-ci.com/g/RamyTalal/Exporter)
-[![StyleCI](https://styleci.io/repos/54327422/shield?branch=master)](https://styleci.io/repos/80513668)
+[![StyleCI](https://styleci.io/repos/54327422/shield?branch=master)](https://styleci.io/repos/54327422)
 [![Total Downloads](https://img.shields.io/packagist/dt/RamyTalal/Exporter.svg?style=flat-square)](https://packagist.org/packages/RamyTalal/Exporter)
 
 Export the Laravel environment file to a capable web server format.

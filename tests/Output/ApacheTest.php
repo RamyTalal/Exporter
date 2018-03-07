@@ -9,7 +9,7 @@ class ApacheTest extends TestCase
 {
     public function testGeneratedOutput()
     {
-        $fileContents = <<<EOF
+        $fileContents = <<<'EOF'
 key1=value1
 key2="value2"
 EOF;
@@ -17,7 +17,7 @@ EOF;
         $server = new Apache($fileContents);
         $output = $server->generate();
 
-        $expected = <<<EOF
+        $expected = <<<'EOF'
 SetEnv key1 "value1"
 SetEnv key2 "value2"
 EOF;

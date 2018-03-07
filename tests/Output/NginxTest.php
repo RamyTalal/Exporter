@@ -9,7 +9,7 @@ class NginxTest extends TestCase
 {
     public function testGeneratedOutput()
     {
-        $fileContents = <<<EOF
+        $fileContents = <<<'EOF'
 key1=value1
 key2="value2"
 EOF;
@@ -17,7 +17,7 @@ EOF;
         $server = new Nginx($fileContents);
         $output = $server->generate();
 
-        $expected = <<<EOF
+        $expected = <<<'EOF'
 fastcgi_param key1 "value1";
 fastcgi_param key2 "value2";
 EOF;
