@@ -5,7 +5,7 @@ namespace Talal\Exporter\Output;
 class Iis extends Output
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function generate() : string
     {

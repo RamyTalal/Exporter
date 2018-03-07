@@ -9,7 +9,7 @@ class BashTest extends TestCase
 {
     public function testGeneratedOutput()
     {
-        $fileContents = <<<EOF
+        $fileContents = <<<'EOF'
 key1=value1
 key2="value2"
 EOF;
@@ -17,7 +17,7 @@ EOF;
         $server = new Bash($fileContents);
         $output = $server->generate();
 
-        $expected = <<<EOF
+        $expected = <<<'EOF'
 export key1="value1"
 export key2="value2"
 EOF;

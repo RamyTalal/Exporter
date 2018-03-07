@@ -2,9 +2,9 @@
 
 namespace Talal\Exporter\Console\Command;
 
+use Talal\Exporter\Exporter;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use Talal\Exporter\Exporter;
 
 class Export extends Command
 {
@@ -46,7 +46,7 @@ class Export extends Command
     public function handle()
     {
         $fileContents = $this->filesystem->get(
-            $this->laravel->basePath() . '/' . $this->option('file')
+            $this->laravel->basePath().'/'.$this->option('file')
         );
 
         $this->export($fileContents);
@@ -65,6 +65,7 @@ class Export extends Command
 
         if (! class_exists($server)) {
             $this->error('The provided server is not exportable.');
+
             return 0;
         }
 

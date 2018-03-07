@@ -9,7 +9,7 @@ class LighttpdTest extends TestCase
 {
     public function testGeneratedOutput()
     {
-        $fileContents = <<<EOF
+        $fileContents = <<<'EOF'
 key1=value1
 key2="value2"
 EOF;
@@ -17,7 +17,7 @@ EOF;
         $server = new Lighttpd($fileContents);
         $output = $server->generate();
 
-        $expected = <<<EOF
+        $expected = <<<'EOF'
 setenv.add-environment = (
 	"key1" => "value1",
 	"key2" => "value2"
