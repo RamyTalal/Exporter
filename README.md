@@ -48,8 +48,8 @@ If you discover any security related issues, please email ramy@thinkquality.nl i
 
 ## Credits
 
-- [Ramy Talal][https://ramy.nl]
-- [All Contributors][../../contributors]
+- [Ramy Talal](https://github.com/RamyTalal)
+- [All Contributors](../../contributors)
 
 ## License
 
